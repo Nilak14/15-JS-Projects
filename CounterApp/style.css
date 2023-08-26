@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: min(700px, 90%);
+  gap: 2rem;
+  box-shadow: 27px 27px 54px #b3b3b3, -27px -27px 54px #ffffff;
+  padding: 2rem;
+  border-radius: 34px;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.countingNumber {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border: 5px solid black;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  border-radius: 100vw;
+  box-shadow: 0px 5px 30px 0.5px #000000;
+  cursor: pointer;
+  transition: all ease 250ms;
+  letter-spacing: 3px;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+#increase:hover {
+  background-color: #0bb50b;
+}
+
+#decrease:hover {
+  background-color: #b22222;
+}
+
+@media (max-width: 50em) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .countingNumber {
+    font-size: 4.5rem;
+  }
+
+  .buttons {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    width: 90%;
+    padding: 0.5rem 1rem;
+  }
+}
