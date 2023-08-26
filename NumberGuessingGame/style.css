@@ -1,0 +1,238 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /* Colors */
+  --PRIMARY-COLOR: hsl(240, 62%, 10%);
+  --ACCENT-COLOR: hsl(39, 100%, 50%);
+  --LIGHT-COLOR: hsl(208, 100%, 97%);
+
+  /* Border */
+  --BORDER-300-DARK: 3px solid black;
+}
+
+body {
+  background-color: var(--PRIMARY-COLOR);
+  color: var(--LIGHT-COLOR);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: min(800px, 90%);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--ACCENT-COLOR);
+  font-size: 2rem;
+  text-align: center;
+  margin-block: 2rem;
+  font-weight: bold;
+}
+
+.game-desc {
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-part {
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.guess-input-field {
+  font-size: 1.3rem;
+  padding: 1em;
+  border-radius: 100vw;
+  border: var(--BORDER-300-DARK);
+  box-shadow: 0px 0.5px 10px 1px var(--LIGHT-COLOR);
+  font-weight: bolder;
+  color: var(--PRIMARY-COLOR);
+  text-align: center;
+}
+
+.guess-input-field::placeholder {
+  color: var(--PRIMARY-COLOR);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Removes that arrow to increase or decrease the num in input field of type number */
+.guess-input-field::-webkit-inner-spin-button,
+.guess-input-field::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.guessButton {
+  font-size: 1.3rem;
+  padding: 0.5em 2.5em;
+  border-radius: 100vw;
+  border: var(--BORDER-300-DARK);
+  background-color: var(--ACCENT-COLOR);
+  box-shadow: 0px 0.5px 10px 1px var(--ACCENT-COLOR);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.guessButton:hover {
+  scale: 1.1;
+}
+.guess-p {
+  background-color: var(--ACCENT-COLOR);
+  color: var(--PRIMARY-COLOR);
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  width: 100vw;
+  text-align: center;
+}
+
+.previous-guess-p,
+.guess-p {
+  font-size: 1.3rem;
+}
+
+.previous-guess {
+  display: block;
+  font-size: 1.1rem;
+  background-color: var(--ACCENT-COLOR);
+  width: 100vw;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  color: var(--PRIMARY-COLOR);
+  font-weight: bold;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.result {
+  font-size: 1.2rem;
+  transform: translateY(-15px);
+}
+
+.res-js {
+  font-size: 1.2rem;
+  transform: translateY(-20px);
+}
+
+.restartGame {
+  border: var(--BORDER-300-DARK);
+  background-color: var(--ACCENT-COLOR);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--PRIMARY-COLOR);
+  width: 23rem;
+  aspect-ratio: 2/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  animation: puff-in-center 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+@keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    transform: translate(-50%, -50%);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    transform: translate(-50%, -50%);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.text {
+  padding-inline: 1.5em;
+}
+
+.active {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.playGame {
+  font-size: 1.3rem;
+  padding: 0.5em 1.5em;
+  background-color: var(--PRIMARY-COLOR);
+  border: var(--BORDER-300-DARK);
+  font-weight: bold;
+  border-radius: 100vw;
+  box-shadow: 0px 0.5px 10px 1px var(--PRIMARY-COLOR);
+  color: var(--ACCENT-COLOR);
+  cursor: pointer;
+}
+
+.playGame:hover {
+  scale: 1.1;
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 50em) {
+  body {
+    gap: 1rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
+
+  .game-desc {
+    font-size: 2rem;
+  }
+
+  .guess-input-field {
+    width: 30rem;
+    padding: 1rem;
+  }
+
+  .guess-p {
+    font-size: 2rem;
+    width: 90vw;
+  }
+  .previous-guess {
+    width: 90vw;
+    font-size: 2rem;
+    padding-block: 1rem;
+  }
+  .previous-guess-p {
+    font-size: 2rem;
+  }
+  .res-js {
+    font-size: 2rem;
+  }
+  .restartGame {
+    width: 30rem;
+    font-size: 1.6rem;
+  }
+}

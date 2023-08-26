@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nilak Pathak">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <section class="container top-part">
+            <h1 class="title">Guess The Number</h1>
+            <div class="game-desc">
+                <p class="game-desc-p">Try and guess a random number between 1 and 100</p>
+                <p class="game-desc-p">You have 7 attempts to guess the right number</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="input-part container">
+            <p class="guess-p">Guesses Remaining : <span class="remaining-guess"></span></p>
+            <input class="guess-input-field" id="guess-input" type="number" placeholder="Guess a number here" autofocus>
+            <button class="guessButton" id="guess">Enter</button>
+        </section>
+
+        <section class="res-js container">
+            <p class="r-js"></p>
+        </section>
+
+        <section class="restartGame none">
+            <p class="text"></p>
+            <button class="playGame">Play Again</button>
+        </section>
+
+        <section class="result-part container">
+            <p class="previous-guess-p">Previous Guesses: </p>
+            <span class="previous-guess">
+
+            </span>
+        </section>
+    </main>
+</body>
+<script src="app.js"></script>
+
+</html>
