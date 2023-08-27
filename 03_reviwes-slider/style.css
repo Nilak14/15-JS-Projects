@@ -1,0 +1,128 @@
+body {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: aliceblue;
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: 1.2px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.25rem;
+  width: 10rem;
+  background-color: rgb(26, 174, 223);
+  transform: translateY(70px);
+}
+
+.review {
+  width: min(500px, 80%);
+  margin-inline: auto;
+  margin-top: 3rem;
+  display: grid;
+  place-items: center;
+  padding-inline: 3rem;
+  padding-block: 1.5rem;
+  border-radius: 29px;
+  background: #e0e0e0;
+  box-shadow: inset 22px 22px 44px #d3d3d3, inset -22px -22px 44px #ededed;
+}
+
+.img-container {
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  border: 6px double rgb(26, 174, 223);
+}
+
+.img-container::before {
+  content: "\201D";
+  position: absolute;
+  background-color: rgb(26, 174, 223);
+  color: white;
+  font-size: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translate(-20px);
+  font-weight: 500;
+}
+
+#person-image {
+  border-radius: 50%;
+}
+
+#name {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+#job {
+  color: rgb(26, 174, 223);
+  letter-spacing: 1.3px;
+  margin-block-end: 1rem;
+}
+
+#review {
+  color: gray;
+}
+
+.button-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  margin-top: 0.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding-inline: 0.3rem;
+  font-weight: bold;
+  color: rgb(26, 174, 223);
+  cursor: pointer;
+}
+
+.random-btn {
+  cursor: pointer;
+  outline: 5px double rgb(26, 174, 223);
+  padding: 0.5em 1em;
+  color: rgb(26, 174, 223);
+  border-radius: 100vw;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.random-btn:hover {
+  background-color: rgb(26, 174, 223);
+  color: black;
+  outline-color: black;
+}
+
+@media (max-width: 50em) {
+  .review {
+    padding-inline: 0.5rem;
+  }
+  .img-container::before {
+    transform: translate(-20px);
+    font-size: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
