@@ -1,0 +1,95 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+nav {
+  background-color: black;
+  color: white;
+  box-shadow: 1px 11px 39px 4px rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+  font-size: 2rem;
+}
+.name {
+  color: salmon;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: salmon;
+  border: none;
+  cursor: pointer;
+}
+
+.links {
+  list-style: none;
+  height: 0;
+  overflow: hidden;
+  transition: all ease 500ms;
+}
+
+.links a {
+  color: white;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: block;
+  transition: all ease 500ms;
+}
+
+@media (max-width: 62em) {
+  .links a:hover {
+    background-color: salmon;
+    padding-left: 2rem;
+  }
+}
+
+.social-links {
+  display: none;
+}
+
+.show-links {
+  height: 13rem;
+}
+
+@media (min-width: 62em) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+  }
+  .social-links {
+    display: flex;
+    list-style-type: none;
+    font-size: 2rem;
+    gap: 2rem;
+  }
+  .links {
+    height: auto;
+    display: flex;
+    gap: 3rem;
+  }
+  .links a:hover {
+    scale: 1.3;
+    text-decoration: underline;
+  }
+  .social-links a {
+    color: salmon;
+  }
+  .social-links i:hover {
+    scale: 1.3;
+  }
+}
