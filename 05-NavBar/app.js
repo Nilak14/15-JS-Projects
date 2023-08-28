@@ -10,4 +10,5 @@ toggleBtn.addEventListener('click', () => {
         toggleBtn.innerHTML = `<i class="fa-sharp fa-solid fa-xmark"></i>`
         navList.classList.add('show-links')
     }
+    // navList.classList.toggle('show-links');
 })
