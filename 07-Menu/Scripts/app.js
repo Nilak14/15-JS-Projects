@@ -16,7 +16,6 @@ function renderFilterMenuItems(category) {
             return menuItems
         }
     })
-    // console.log(item)
     return item
 }
 
