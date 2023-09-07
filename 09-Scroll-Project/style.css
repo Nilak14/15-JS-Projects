@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.144), rgba(0, 0, 0, 0.423)),
+  background: linear-gradient(rgba(0, 0, 0, 0.852), rgba(0, 0, 0, 0.507)),
     url(Images/hero.jpeg) center/cover no-repeat;
   position: relative;
   min-height: 100vh;
@@ -39,8 +39,13 @@ nav {
   cursor: pointer;
 }
 
+.nav-toggle:hover {
+  scale: 1.1;
+}
+
 .links-container {
-  height: 14rem;
+  height: 0;
+  overflow: hidden;
   transition: all ease 250ms;
 }
 
@@ -48,27 +53,14 @@ nav {
   font-size: 1.5rem;
   text-transform: capitalize;
   list-style: none;
-  padding: 0.5rem 1rem;
-  border-bottom: 2px solid black;
-  transition: all ease 250ms;
-}
-
-.links li:first-child {
-  padding-top: 1rem;
-  border-top: 2px solid black;
 }
 
 .links li a {
   text-decoration: none;
   color: black;
   display: block;
-}
-
-.hide-list {
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  transition: all ease 250ms;
+  transition: all ease 500ms;
+  font-weight: 600;
 }
 
 .banner {
@@ -103,6 +95,12 @@ nav {
   font-weight: bold;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  transition: all ease 300ms;
+}
+
+.btn:hover {
+  scale: 1.1;
+  background-color: firebrick;
 }
 
 .section {
@@ -143,4 +141,54 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+
+@media (max-width: 50em) {
+  .show-list {
+    height: 14rem;
+  }
+  .links li {
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid black;
+    transition: all ease 250ms;
+  }
+  .links li:first-child {
+    padding-top: 1rem;
+    border-top: 2px solid black;
+  }
+  .links li a:hover {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 50em) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .links-container {
+    height: auto;
+    display: flex;
+  }
+  .links li a {
+    display: inline;
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    padding-inline-end: 3rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .links li a:hover {
+    color: firebrick;
+    text-decoration: underline;
+  }
 }
