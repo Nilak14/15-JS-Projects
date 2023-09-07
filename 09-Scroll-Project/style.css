@@ -8,11 +8,6 @@ header {
   min-height: 100vh;
 }
 
-nav {
-  background-color: whitesmoke;
-  position: fixed;
-  width: 100%;
-}
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -22,8 +17,9 @@ nav {
 
 .logo {
   font-size: 2rem;
-  background-color: black;
-  color: white;
+  font-weight: bold;
+  background-color: white;
+  color: black;
   padding: 0.2em;
   width: 3rem;
   height: 3rem;
@@ -57,12 +53,20 @@ nav {
 
 .links li a {
   text-decoration: none;
-  color: black;
+  color: white;
   display: block;
   transition: all ease 500ms;
   font-weight: 600;
 }
+.fixed {
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+}
 
+.fixed .links li a {
+  color: black;
+}
 .banner {
   min-height: 100vh;
   display: grid;
@@ -141,11 +145,22 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.show-top-link {
+  visibility: visible;
+  z-index: 100;
 }
 
 @media (max-width: 50em) {
-  .show-list {
-    height: 14rem;
+  nav {
+    background-color: white;
+  }
+
+  .links li a {
+    color: black;
   }
   .links li {
     padding: 0.5rem 1rem;
@@ -167,7 +182,7 @@ footer {
   }
 
   .links-container {
-    height: auto;
+    height: auto !important;
     display: flex;
   }
   .links li a {
