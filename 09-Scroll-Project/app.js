@@ -19,7 +19,7 @@ toggleBtn.addEventListener('click', () => {
     }
 })
 
-//fixed-navbar
+// fixed-navbar
 const nav = document.querySelector('nav');
 const navHeight = nav.getBoundingClientRect().height
 window.addEventListener('scroll', () => {
@@ -32,13 +32,36 @@ window.addEventListener('scroll', () => {
 
 // TopLink
 const headerHeight = document.querySelector('header').getBoundingClientRect().height;
-console.log(headerHeight)
 const topLink = document.querySelector('.top-link')
-console.log(topLink)
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > headerHeight) {
         topLink.classList.add('show-top-link')
     } else {
         topLink.classList.remove('show-top-link')
     }
+})
+
+// scroll
+const scrollLinks = document.querySelectorAll('.scroll-link');
+scrollLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = e.currentTarget.getAttribute('href').slice(1);
+        const element = document.getElementById(id);
+        const fixedNav = nav.classList.contains('fixed');
+        console.log(fixedNav)
+        let position = element.offsetTop;
+        // if (!fixedNav) {
+        //     position = position - navHeight;
+        // }
+        // if (navHeight > 82) {
+        //     position = position + containerHeight
+        // }
+        position = position - navHeight;
+        window.scrollTo({
+            left: 0,
+            top: position
+        })
+        linkContainer.style.height = 0;
+    })
 })
