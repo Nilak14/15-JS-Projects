@@ -1,0 +1,101 @@
+body {
+  width: 95%;
+  margin-inline: auto;
+}
+
+.title {
+  text-align: center;
+  margin-block: 2rem;
+}
+.title h2 {
+  font-size: 2.5rem;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+}
+
+.title p {
+  color: rgb(71, 69, 69);
+}
+.about-center {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button-container {
+  display: flex;
+}
+
+.tab-btn {
+  width: 34%;
+  background-color: rgb(223, 223, 223);
+  border: none;
+  padding: 1em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.tab-btn:hover {
+  background-color: rgb(155, 151, 151);
+}
+
+.tab-btn.active {
+  background-color: transparent;
+}
+
+.content {
+  width: 90%;
+  margin-inline: auto;
+  margin-block: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.content h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.content p {
+  color: rgb(71, 69, 69);
+}
+
+.content.active {
+  display: none;
+}
+
+@media (min-width: 50em) {
+  body {
+    overflow: hidden;
+  }
+  .title h2 {
+    font-size: 3.5rem;
+  }
+  .title p {
+    font-size: 1.5rem;
+  }
+  .about-center {
+    flex-direction: row;
+    width: 85%;
+    margin-inline: auto;
+  }
+  .about-img {
+    width: 300%;
+  }
+  .content h4 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1.3rem;
+  }
+  .tab-btn {
+    font-size: 1.3rem;
+  }
+}
