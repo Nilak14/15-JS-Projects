@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(192, 222, 249);
+}
+.section-center {
+  width: min(800px, 95%);
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.amount-label {
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 15%;
+  padding: 0.5em;
+}
+
+.btn {
+  padding: 0.5em;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
