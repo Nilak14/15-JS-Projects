@@ -18,10 +18,16 @@ const inputElement = document.querySelector('#amount')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    para.innerHTML = ''
-    const input = inputElement.value;
-    for (let i = 0; i < input; i++) {
-        para.innerHTML += text[i];
+    const userInput = Number(inputElement.value);
+    if (isNaN(userInput) || userInput <= 0 || userInput > 9) {
+        console.log(userInput)
+        alert('Please enter number between 1 - 9')
+    } else {
+        let newText = text.slice(0, userInput)
+        newText = newText.map(item => {
+            return `<p class = 'result'>${item}</p>`
+        }).join("")
+        para.innerHTML = newText
     }
-    // para.innerHTML += text[input]
+    inputElement.value = ''
 })
