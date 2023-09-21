@@ -5,12 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 
 <body>
+    <main>
+        <!-- Main container -->
+        <section class="container">
+            <!-- Todo Form -->
+            <form class="todo-form">
+                <p class="message">Item Added</p>
+                <h1 class="title">Todo List</h1>
+                <div class="form-main">
+                    <input type="text" name="todo" id="todo-input">
+                    <button type="submit" class="submit-button">Add</button>
+                </div>
+            </form>
+            <!-- Todo List Container -->
+            <div class="todo-list-container">
+                <article class="todo-list">
 
+                </article>
+                <button class="clear-btn">Clear All items</button>
+            </div>
+            <!-- End of Todo List Container -->
+        </section>
+    </main>
 </body>
 <script src="app.js"></script>
 

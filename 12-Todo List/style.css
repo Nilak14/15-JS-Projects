@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: rgb(240, 248, 255);
+  display: grid;
+  place-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin-block: 3rem;
+  padding-inline: 3rem;
+  padding-block: 1.5rem;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.container:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2.5px;
+  word-spacing: 3.5px;
+  margin-bottom: 1rem;
+  padding-block: 0.3rem;
+  visibility: hidden;
+}
+
+.success {
+  visibility: visible;
+  background-color: #7fea7f;
+  color: #1d891d;
+}
+.danger {
+  visibility: visible;
+  background-color: #f1a7a7;
+  color: #972e2e;
+}
+
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  font-family: Georgia, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.form-main {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+}
+
+.submit-button {
+  background-color: transparent;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(219, 196, 241);
+  font-weight: bold;
+  transition: all ease 300ms;
+}
+
+.submit-button:hover {
+  background-color: rgb(152, 98, 202);
+  color: white;
+}
+
+#todo-input {
+  width: 25rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: rgb(245, 235, 235);
+}
+
+.todo-list-container {
+  text-transform: capitalize;
+  letter-spacing: 2.5px;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  text-align: center;
+  visibility: hidden;
+}
+
+.show-container {
+  visibility: visible;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-btn {
+  color: rgb(74, 199, 74);
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: red;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-btn {
+  border: none;
+  background-color: transparent;
+  letter-spacing: 2.5px;
+  color: #972e2e;
+  font-weight: bold;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
