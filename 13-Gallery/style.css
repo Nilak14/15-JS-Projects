@@ -1,0 +1,139 @@
+.section {
+  padding: 5rem 0;
+  width: 90vw;
+  margin-inline: auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 95vw;
+  }
+}
+
+.img {
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+.img:hover {
+  box-shadow: 0px 2px 23px 5px black;
+}
+
+.modal {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  /* overflow: scroll; */
+  opacity: 0;
+}
+
+.modal.open {
+  opacity: 1;
+  z-index: 999;
+}
+
+.close-btn {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 4rem;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+}
+
+.modal-content {
+  padding-top: 7rem;
+  width: 90vw;
+  margin-inline: auto;
+}
+
+.main-img {
+  width: 90%;
+  height: 20rem;
+  margin-inline: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-name {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Franklin Gothic Medium", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.modal-images {
+  display: flex;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.modal-img {
+  width: 30%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity ease-in 300ms;
+  object-fit: cover;
+}
+
+.modal-img:hover {
+  opacity: 1;
+}
+
+.modal-img.active {
+  opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 250px;
+}
+
+.next-btn {
+  right: 25px;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-img {
+    width: 80%;
+  }
+  .modal-images {
+    width: 80%;
+  }
+  .modal-img {
+    width: 25%;
+    height: 7rem;
+  }
+  .prev-btn {
+    left: 150px;
+  }
+  .next-btn {
+    right: 150px;
+  }
+}
