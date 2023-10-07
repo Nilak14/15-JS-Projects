@@ -86,12 +86,23 @@
   display: flex;
   width: 90%;
   margin-inline: auto;
+  overflow-x: auto;
+}
+
+.modal-images::-webkit-scrollbar {
+  height: 5px;
+}
+
+.modal-images::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
 }
 
 .modal-img {
-  width: 30%;
+  width: 50%;
+  height: 7rem;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.4;
   transition: opacity ease-in 300ms;
   object-fit: cover;
 }
@@ -115,8 +126,12 @@
   top: 250px;
 }
 
+.prev-btn {
+  left: 10px;
+}
+
 .next-btn {
-  right: 25px;
+  right: 10px;
 }
 
 @media screen and (min-width: 1200px) {
