@@ -74,7 +74,6 @@ class Gallery {
     }
 
     selectImageFromList(e) {
-        console.log('select')
         if (e.target.classList.contains('modal-img')) {
             let active = this.modalImages.querySelector('.active');
             active.classList.remove('active')
