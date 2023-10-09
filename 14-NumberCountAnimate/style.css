@@ -1,0 +1,39 @@
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  width: min(90%, 1300px);
+  margin-inline: auto;
+  padding-top: 4rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 25rem;
+  aspect-ratio: 2 / 1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+}
+
+.card:nth-child(1) {
+  border-bottom: 5px solid rgb(218, 200, 98);
+}
+.card:nth-child(2) {
+  border-bottom: 5px solid rgb(61, 165, 61);
+}
+.card:nth-child(3) {
+  border-bottom: 5px solid purple;
+}
+
+.number {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.title {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
