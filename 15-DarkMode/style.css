@@ -1,0 +1,65 @@
+:root {
+  --COLOR-BG: rgb(254, 254, 254);
+  --COLOR-ACCENT: #d23669;
+  --COLOR-MAIN-TEXT: black;
+  --COLOR-SMALL-TEXT: grey;
+}
+body {
+  background-color: var(--COLOR-BG);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  width: min(90%, 650px);
+  margin-inline: auto;
+  padding-top: 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .title {
+  font-size: 3rem;
+  color: var(--COLOR-MAIN-TEXT);
+  letter-spacing: 2px;
+}
+
+.darkModeToggle {
+  padding: 0.5em 1em;
+  background-color: var(--COLOR-ACCENT);
+  color: var(--COLOR-BG);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.darkModeToggle:hover {
+  scale: 0.9;
+}
+
+.article-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-block: 3rem;
+}
+
+.article__header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--COLOR-ACCENT);
+}
+
+.article__details {
+  color: var(--COLOR-SMALL-TEXT);
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+.article__description {
+  color: var(--COLOR-MAIN-TEXT);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
