@@ -164,3 +164,35 @@ main {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.loader {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  z-index: 999;
+  background-color: black;
+  color: white;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  animation: loading 2s ease-in-out infinite forwards;
+}
+
+.loader.hide {
+  z-index: -1;
+  visibility: hidden;
+}
+
+@keyframes loading {
+  0% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: black;
+  }
+}
