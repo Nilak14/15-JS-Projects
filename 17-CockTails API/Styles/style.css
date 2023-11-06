@@ -54,7 +54,14 @@ main {
   font-size: 2rem;
   letter-spacing: 2px;
 }
+.error {
+  text-align: center;
+  font-size: 4rem;
+}
 
+.hide {
+  display: none;
+}
 @media (min-width: 40em) {
   main {
     width: 80%;
