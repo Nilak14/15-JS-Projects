@@ -11,4 +11,5 @@ async function displayData() {
 }
 
 search()
+
 window.addEventListener('DOMContentLoaded', displayData)
