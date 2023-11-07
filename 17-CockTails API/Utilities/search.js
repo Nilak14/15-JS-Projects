@@ -9,10 +9,10 @@ const baseURL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 export function search() {
     searchBar.addEventListener('keyup', () => {
-        showLoading()
         let value = searchBar.value;
         if (value) {
             const url = `${baseURL}${value}`
+            showLoading()
             getDrinks(url)
                 .then(data => {
                     hideLoading()
