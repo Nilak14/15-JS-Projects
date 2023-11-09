@@ -5,7 +5,7 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1.5px;
   display: grid;
-  min-height: 80vh;
+  min-height: 100vh;
   align-content: center;
 }
 
@@ -14,7 +14,6 @@ main {
   margin-inline: auto;
   display: grid;
   gap: 3rem;
-  /* border: 2px solid red; */
   position: relative;
 }
 
@@ -42,12 +41,6 @@ main {
   transform: translate(-50%);
 }
 
-.slider-container {
-  display: grid;
-  gap: 1.5rem;
-  text-align: center;
-}
-
 .img {
   width: 80%;
   clip-path: circle(39% at 50% 50%);
@@ -63,7 +56,12 @@ main {
 
 .name {
   color: #49a6e9;
+  text-transform: capitalize;
   font-size: 1.3rem;
+}
+
+.job {
+  text-transform: capitalize;
 }
 
 .text {
@@ -71,7 +69,6 @@ main {
 }
 
 .slider-wrapper {
-  /* position: relative; */
   width: 90%;
   margin-inline: auto;
 }
@@ -94,4 +91,33 @@ main {
 .next {
   top: 50%;
   left: 100%;
+}
+
+.slider-container {
+  display: flex;
+  position: relative;
+  gap: 1.5rem;
+  overflow: hidden;
+  height: 450px;
+  text-align: center;
+  transition: all 250ms ease-in-out;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+.next {
+  transform: translateX(100%);
+}
+
+.end {
+  transform: translateX(-100%);
 }
